@@ -43,7 +43,7 @@ export default class Portfolio extends Component {
                     <div className="row">
                         {array.map(project => {
                             return (
-                                <div className="col-4">
+                                <div className="col-sm-6 col-md-4">
                                     <div className="card portfolio-card text-center">
                                         <div className="card-body">
                                             <h2 className="card-title">{project.title}</h2>
