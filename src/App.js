@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import { NavLink } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <div className="card project-card text-center">
+          <div className="card-body">
+            <h2 className="card-title">Current Project</h2>
+            <h4 class="card-subtitle text-muted">Project Title</h4>
+            <img className="card-img" src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="" />
+            <p className="card-text">Project Description</p>
+            <NavLink to="/Portfolio"><button type="button" class="btn btn-info btn-current">Check it out in my portfolio!</button></NavLink>
+          </div>
+        </div>
+        <Footer />
       </div>
     );
   }
